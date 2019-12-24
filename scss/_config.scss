@@ -1,0 +1,58 @@
+//color palette
+$primary-color: #999999;
+$secondary-color:#ffe400;
+$dark-color: #000000;
+$light-color: #ffffff;
+$danger-color: #dc3545;
+$success-color: #28a745;
+$body-bg-color:#121212;
+$body-text:#aaaaaa;
+
+//set text color based on background 
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return #000000;
+    }
+
+    @else {
+        @return #ffffff;
+    }
+}
+
+//set background & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+// h6 starts at $base-font-size 
+// headings grow from h6 to h1 by $heading-scale
+$base-font-size: 16px;
+$heading-scale: 8; // amount of px headings grow from h6 to h1
+
+@for $i from 1 to 7 {
+    h#{$i} {
+        font-size: $base-font-size + $heading-scale * (6 - $i);
+    }
+}
+
+//font size from 1px to 50px
+@for $j from 1 to 50 {
+    .fs-#{$j} {
+        font-size: 1px * $j;
+    }
+}
+
+// Margin & Padding
+@for $space from 1 to 50 {
+
+    //all around margin
+    .M-#{$space} {
+        margin: #{$space}px;
+    }
+
+    //all around padding
+    .P-#{$space} {
+        padding: #{$space}px;
+    }
+}

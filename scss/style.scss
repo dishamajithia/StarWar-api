@@ -1,0 +1,108 @@
+@import 'config';
+@import 'utilities';
+@import 'reset';
+@import 'responsive';
+
+//nav
+nav {
+    background: url('../images/bg.jpg') top center no-repeat;
+    background-size: cover;
+
+    .navbar-brand {
+        margin: 40px auto;
+
+        img {
+            max-width: 300px;
+        }
+    }
+}
+
+//wrapper
+.wrapper {
+    background-color: $body-bg-color;
+
+    //searchbar
+    .search-bar {
+
+        .input-group-prepend button.btn:hover {
+            background-color: #ffffff;
+        }
+
+        input {
+
+            &:focus,
+            &:hover,
+            &:active {
+                box-shadow: none;
+                outline: none;
+                box-shadow: none;
+                border-color: transparent;
+                background-color: $light-color;
+            }
+
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+    }
+
+    .input-group>.custom-select:not(:last-child),
+    .input-group>.form-control:not(:last-child) {
+        color: $dark-color;
+    }
+
+    .search-view-wrapper {
+        .search-list {
+            ul .list-item {
+                overflow: auto;
+                color: $primary-color;
+                margin-bottom: 25px;
+                margin-top: 40px;
+
+                .title a {
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    h2 {
+                        text-decoration: underline;
+                        color: $light-color;
+                        margin-bottom: 20px;
+                        display: inline-block;
+                    }
+                }
+
+                .content-wrap {
+                    .content {
+                        color: $body-text;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        display: flex;
+
+                        span {
+                            min-width: 110px;
+                            border: 2px solid $primary-color;
+                            border-radius: 5px;
+                            text-align: center;
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+
+    .Nextpage {
+        color: $light-color;
+        text-align: center;
+        text-decoration: underline;
+
+        a.loadmore {
+            text-align: center;
+            display: none;
+        }
+    }
+
+}

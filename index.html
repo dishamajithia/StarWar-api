@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>STARWARS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!-- javscript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/custom.js"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+        <!-- navigation -->
+        <nav class="navbar navbar-light background-dark justify-content-center">
+            <a class="navbar-brand ml-auto mr-auto"><img src="images/sw_logo.png" alt="STARWARS"></a>
+        </nav>
+        <div class="wrapper P-30">
+            <!-- searchbar -->
+            <div class="search-bar w-50 m-auto">
+                <div class="form-group background-light rounded mb-4">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <button id="button-addon" type="button" class="btn btn-link"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                        <input autocomplete="off" id="searchid" type="search"
+                            placeholder="Who is your favourite STARWARS character?" aria-describedby="button-addon"
+                            class="form-control border-0">
+                    </div>
+                </div>
+            </div>
+            <div class="search-view-wrapper">
+                <!-- search list -->
+                <section class="search-list">
+                    <ul id="list"></ul>
+                </section>
+            </div>
+            <div class="Nextpage">
+                <a class="loadMore">Load More...</a>
+            </div>
+        </div>
+</body>
+
+</html>
